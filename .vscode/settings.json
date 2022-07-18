@@ -1,0 +1,9 @@
+{
+		"editor.minimap.enabled": false,
+		"editor.tabSize": 2,
+		"files.associations": {
+				"Dockerfile*": "dockerfile"
+		},
+		"editor.insertSpaces": true,
+		"editor.detectIndentation": false
+}

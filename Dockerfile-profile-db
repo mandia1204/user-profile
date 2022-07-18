@@ -1,0 +1,10 @@
+FROM cassandra:4.0.4
+
+# Require user & pass for accessing Cassandra instance within container
+RUN echo "authenticator: PasswordAuthenticator" >> /etc/cassandra/cassandra.yaml
+
+COPY ./scripts/ /tmp/scripts/
+
+RUN chmod +x /tmp/scripts/init-db.sh /tmp/scripts/db-entrypoint.sh
+
+ENTRYPOINT [ "/tmp/scripts/db-entrypoint.sh" ]

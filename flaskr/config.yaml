@@ -1,0 +1,5 @@
+db:
+  host: "127.0.0.1"
+  port: 32102
+  userName: "matt"
+  password: "1234"

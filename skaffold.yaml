@@ -1,0 +1,13 @@
+apiVersion: skaffold/v1
+kind: Config
+build:
+  artifacts:
+    - image: profile-db
+      docker:
+        dockerfile: Dockerfile-profile-db
+  local:
+    push: false
+deploy:
+  kubectl:
+    manifests:
+      - k8s/db/*.yaml
