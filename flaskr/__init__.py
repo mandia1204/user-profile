@@ -2,9 +2,9 @@ import os
 from flask import Flask
 import yaml
 from yaml.loader import SafeLoader
-from .profileRoutes import addProfileRoutes
+from flaskr.profile_routes import add_profile_routes
 from pathlib import Path
-from .db	import init_db
+from .db import init_db
 
 path = Path(__file__).parent.absolute()
 
@@ -32,6 +32,6 @@ def create_app(test_config=None):
         pass
 
     init_db(app.config['APP_SETTINGS']['db'])
-    addProfileRoutes(app)
+    add_profile_routes(app)
 
     return app
