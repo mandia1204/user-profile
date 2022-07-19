@@ -1,7 +1,11 @@
-from typing import TypedDict
+from typing import List, TypedDict
 
 class ProfileDto(TypedDict):
-    userName: str
+    id: int
+    name: str
     email: str
     age: int
-    avatarPicture: str
+    picture: str
+    phone: str
+    address: str
+    preferences: List[str]
